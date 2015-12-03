@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Our Rising Oceans Team">
+    <meta name="description" content="Global wamring awareness website">
+    <meta name="application name" content="Our Oceans Rising"/>
+
+
+    <title>Our Rising Oceans</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <!-- Custom Fonts -->
+    <!-- <script src="highchart.js"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+   
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
+
+    <style>
+          body {background: white;}
+
+          h1 {
+             font: italic bold 2.2em Lora; 
+             color: #BBB; 
+             margin: 0px;
+          }
+
+     
+
+          controls {
+             width:220px;
+             position: absolute;
+             padding:10px; 
+          }
+
+
+            .container-fluid{
+
+                padding-left: 0px;
+                padding-right: 0px;
+                width:auto;
+                margin: 0 auto;
+                position:relative;
+            }
+
+
+              .banner {
+              background: url(img/deforestationbanner2.jpg) no-repeat center top;
+              margin-top: 0px;
+              padding-top: 60px;
+              text-align: center;
+              background-attachment: relative;
+              background-position: center center;
+              min-height: 480px;
+              width: 100%;
+              height: 550px;
+              -webkit-background-size: 100%;
+              -moz-background-size: 100%;
+              -o-background-size: 100%;
+              background-size: 100%;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              /* background-size: cover; */
+              }
+
+              .banner2 {
+                background-image: url(img/footerbanner.jpg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+                height: 100%;
+                width: 100%;
+
+            }
+
+            #h1bannertext {
+              text-transform: uppercase;
+              
+              font-size: 5rem;
+              white-space: nowrap;
+              margin-top: 100px;
+              padding-top: 60px;
+              text-align: center;
+              background-attachment: relative;
+              background-position: center center;
+              min-height: 480px;
+              width: 100%;
+              -webkit-background-size: 100%;
+              -moz-background-size: 100%;
+              -o-background-size: 100%;
+              background-size: 100%;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+            }
+
+
+             #navlist li
+            {
+                display: inline;
+                list-style-type: none;
+                padding-right: 5px;
+            }
+
+            #Subscribe{
+                color: black;
+            }
+             
+
+            label {
+            display: block;
+            text-align: center;
+            line-height: 150%;
+            font-size: .85em;
+            }
+
+            #containerGlobe, #sliders {
+                min-width: 310px; 
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            #containerGlobe {
+                height: 400px; 
+            }
+
+
+    </style>
+    
+
+    <!--Website Localization -->
+<script type="text/javascript" data-bablic="565fc9f03cab0e4d5a0b5f3c" data-bablic-m="[1449118246,'en',['zh_cn'],0,0,0,0,0,0,0,0,['_v',1]]" src="//cdn2.bablic.com/js/bablic.3.1.js"></script>
+
+
+
+    <script type="text/javaScript">
+   $(function () {
+     var chart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'containerGlobe',
+            type: 'column',
+            margin: 75,
+            options3d: {
+                enabled: true,
+                alpha: 12,
+                beta: 12,
+                depth: 50,
+                viewDistance: 25
+            }
+        },
+        title: {
+            text: 'Deforestation Rate'
+        },
+        subtitle: {
+            text: 'Source: Earth Policy Institute from U.N Food and Agriculture Organization'
+        },
+        xAxis: {
+            categories: [
+                '1990',
+                '2000',
+                '2010'
+                
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Forest Area (Million Hectares)'
+            },
+          //  categories:['100','200','300','400','500','600','700','800','900','1000','1100']
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} MHA</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Asia',
+            data: [576,570,593]
+
+        }, {
+            name: 'Africa',
+            data: [749, 709,694]
+
+        }, {
+            name: 'Europe',
+            data: [989, 998,1005]
+
+        }, {
+            name: 'North and Central America',
+            data: [708,705,705]
+
+        },
+        {
+            name: 'South America',
+            data: [946, 904, 864]
+
+        },
+        {
+            name: 'Oceania',
+            data: [199, 198, 191]
+
+        }
+        ]
+    });
+    
+});
+
+
+</script>
+
+
+
+   
+
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+             <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <span class="glyphicon glyphicon-grain" style="float:left;font-size:55px;color:rgb(118,118,118);"></span>
+                    <p style="font-family: 'Merriweather Sans', sans-serif; font-size:32px; margin-left:55px; color:rgb(228,197,0);" >Our Rising Oceans</p>
+                        <!-- color:rgb(204,41,0) red -->
+                </a>
+            </div>
+
+
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="padding-right:30px;">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="COemission.html">CO Emission</a>
+                    </li>
+                   <li>
+                        <a class="page-scroll" href="#deforestration">Deforestration</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="oceansRising.html">Oceans <br>Rising</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="temperature.html">Climate <br>Changes</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="drought.html">California <br>Drought</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div> 
+        <!-- /.container-fluid -->
+    </nav>
+
+   
+
+   
+    <section id="deforestration" class="banner">
+         <h3 id="h1bannertext" style="font-family:'PT Sans',sans-serif;">Deforestration</h3>
+    </section>
+
+    <div class="container-fluid" style="margin-top:100px;margin-bottom:100px;">
+        <div class="row" style="margin-bottom:50px;">
+                    
+                   
+                   <h3><label><b>Current Forest Cover in the World</b></label><h3>
+            
+                  <div class="span12" style="text-align:center;"><svg style="margin: auto; display:inline" width="1000" height="620" viewBox="0 0 960 650" preserveAspectRatio="xMidYMid meet"></svg></div>
+
+                  <script>
+                    // Map configuration
+                    var width  = 820;
+                    var height = 620;
+                    var rScale = d3.scale.sqrt();
+                    var peoplePerPixel = 50000;
+                    var max_population = [];
+
+                    // Configuration for the spinning effect
+                    var time = Date.now();
+                    var rotate = [0, 0];
+                    var velocity = [.015, -0];
+
+                    // set projection type and parameters
+                    var projection = d3.geo.orthographic()
+                    .scale(300)
+                    .translate([(width / 2) + 100, height / 2])
+                    .clipAngle(90)
+                    .precision(0.3);
+
+                    // create path variable, empty svg element and group container
+                    var path = d3.geo.path()
+                    .projection(projection);
+                    var svg = d3.select("svg");
+                    var g = svg.append("g");
+
+                    // drawing dark grey spehere as landmass
+                    g.append("path")
+                    .datum({type: "Sphere"})
+                    .attr("class", "sphere")
+                    .attr("d", path)
+                    .attr("fill", "#cccccc");
+
+                    // loading city locations from geoJSON
+                    d3.json("json/deforestration_global.txt", function(error, data) {
+
+                             // Handle errors getting and parsing the data
+                             if (error) { return error; }
+
+                             // setting the circle size (not radius!) according to the number of inhabitants per city
+                             deforestation_array = [];
+                             for (i = 0; i < data.features.length; i++) {
+                              deforestation_array.push(data.features[i].properties.population);
+                            }
+                            max_population = deforestation_array.sort(d3.descending)[0]
+                            var rMin = 0;
+                            var rMax = Math.sqrt(max_population / (peoplePerPixel * Math.PI));
+                            rScale.domain([0, max_population]);
+                            rScale.range([rMin, rMax]);
+
+                            path.pointRadius(function(d) {
+                              return d.properties ? rScale(d.properties.population) : 1;
+
+                            });
+
+                             // Drawing transparent circle markers for cities
+                             g.selectAll("path.cities").data(data.features)
+                             .enter().append("path")
+                             .attr("class", "cities")
+                             .attr("d", path)
+                             .attr("fill", "#0D751D")
+                             .attr("fill-opacity", 0.3);
+
+                             // start spinning!
+                             spinning_globe();
+                           });
+
+                          
+                          function spinning_globe(){
+                           d3.timer(function() {
+
+                          // get current time
+                          var dt = Date.now() - time;
+
+                          // get the new position from modified projection function
+                          projection.rotate([rotate[0] + velocity[0] * dt, rotate[1] + velocity[1] * dt]);
+
+                          // update cities position = redraw
+                          svg.selectAll("path.cities").attr("d", path);
+                        });
+
+                    }
+
+
+                    // hackish approach to get bl.ocks.org to display individual height
+                    d3.select(self.frameElement).style("height", height + "px");
+
+                    </script>
+
+                  <br><br><br><br>
+
+
+                  <div id="containerGlobe" style="min-width: 131px; height: 400px; margin: 0 auto"></div>
+
+                  </div>
+
+
+
+        </div>
+        
+
+
+
+ <footer class="banner2">
+
+            <div class="container">
+                
+                        <div class="row"> 
+                                <div class="col-xs-6 col-sm-4 col-md-offset-4 col-sm-offset-4">
+                                     <p style="color:white; font-size:35px;">Stay Connected</p>
+                                         <div class="row" style="margin-right:30px; margin-left:30px;">
+
+                                                <div class="col-xs-6 col-sm-3">
+                                                    <a href="https://twitter.com/ourrisingoceans"><i style="font-size:35px;" class="fa fa-twitter"></i></a>
+                                                </div>
+
+                                                <div class="col-xs-6 col-sm-3">
+                                                    <a href="https://github.com/neerajkumbhar/OurRisingOceans"><i style="font-size:35px;" class="fa fa-github-alt"></i></a>
+                                                </div>
+
+                                                <div class="clearfix visible-xs-block"></div>
+
+                                                <div class="col-xs-6 col-sm-3">
+                                                     <a href="https://www.facebook.com/ourrisingoceans/"><i style="font-size:35px;" class="fa fa-facebook"></i></a>
+                                                </div>
+
+                                                <div class="col-xs-6 col-sm-3">
+                                                    <a href="https://www.instagram.com/ourrisingoceans/"><i style="font-size:35px;" class="fa fa-instagram"></i></a>
+                                                </div>
+
+                                         </div>     
+                                     <hr> 
+                                </div>  
+                        </div>
+                        
+                        <div class="row" style="margin-top:20px;">
+
+                                
+                                <div class="col-xs-6 col-sm-4 col-md-offset-4 col-sm-offset-4">
+                                    
+                                    <p style="color:white; font-size:35px;">Subscribe for newsletter</p> 
+                                    
+                                            <div class="form-group" style="margin-bottom:40px;">
+                                                     <input type="email" placeholder="enter email address" class="form-control" required>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-default btn-warning"> 
+                                                <a href="http://www3.weforum.org/docs/WEF_GAC_WhitePaperEnereySecurityGlobalWarming_2012.pdf" id="Subscribe" download target="_blank">
+                                                    Subscribe
+                                                </a>
+                                            </button>
+             
+                                           <hr>           
+                                </div>
+                                 
+                                 
+                        </div>
+            </div> 
+
+
+             <div class="container" style="margin-top:30px;">
+              
+                <div id="navcontainer">
+                
+                         <ul id="navlist">
+                     
+                                <div class="row">
+                                      <div class="col-xs-6 col-sm-3"><p style="color:white; font-size:25px;">Facts</p></div>
+                                      <div class="col-xs-6 col-sm-3"><p style="color:white; font-size:25px;">Analysis</p></div>
+                                      <div class="clearfix visible-xs-block"></div>
+                                      <div class="col-xs-6 col-sm-3"><p style="color:white; font-size:25px;">Solutions</p></div>
+                                      <div class="col-xs-6 col-sm-3"><p style="color:white; font-size:25px;">Support</p></div>
+                                </div>
+                                <br>
+
+                                <div class="row" style="margin-top:10px;">
+                                      <div class="col-xs-6 col-sm-3"><a href="index.html">Evidence</a></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="COemission.html">CO Emissions</a></div>
+                                      <div class="clearfix visible-xs-block"></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="index.html">Energy Innovations</a></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="blogs.html">Blogs</a></div> 
+                                </div>
+
+                                 <div class="row" style="margin-top:10px;">
+                                      <div class="col-xs-6 col-sm-3"><a href="index.html">Causes</a></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="deforestration.html">Deforestration</a></div>
+                                      <div class="clearfix visible-xs-block"></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="index.html">Greening Transportation</a></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="aboutus.html">About Us</a></div> 
+                                </div>
+
+                                 <div class="row" style="margin-top:10px;">
+                                      <div class="col-xs-6 col-sm-3"><a href="index.html">Effects</a></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="oceansRising.html">Oceans Rising</a></div>
+                                      <div class="clearfix visible-xs-block"></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="index.html">Revving up renewables</a></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="contactus.html">Contact Us<a/></div> 
+                                </div>
+
+                                 <div class="row" style="margin-top:10px;">
+                                      <div class="col-xs-6 col-sm-3"><a href="index.html">Solutions</a></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="temperature.html">Climate Changes</a></div>
+                                      <div class="clearfix visible-xs-block"></div>
+                                      <div class="col-xs-6 col-sm-3"><a href="index.html">Reduce Emissions</a></div>
+                                      <div class="col-xs-6 col-sm-3"></div> 
+                                </div>
+                                
+                                 <div class="row" style="margin-top:10px;">
+                                      <div class="col-sm-3"></div>
+                                      <div class="col-sm-3"><a href="drought.html">California Drought</a></div>
+                                      <div class="col-sm-3"></div>
+                                      <div class="col-sm-3"></div> 
+                                </div> 
+                        </ul>    
+
+                </div>
+
+            </div> 
+
+            <div class="row" style="margin-top:300px;">
+                      <div class="col-sm-12" style="text-align:center;">
+                          <p style="font-size:11; color:darkgray;">© Copyright 2015 - Our Rising Oceans, Inc. All Rights Reserved</p>
+                      </div>
+
+            </div>
+      
+    </footer>
+
+
+   
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+
+</body>
+
+</html>

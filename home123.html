@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Our Rising Oceans</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="">
+    <meta name="Designers Geek" content="">
+
+    <title>Climate Analysis</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style_common.css" />
+        <link rel="stylesheet" type="text/css" href="css/style8.css" />
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<style>
+
+     .banner2 {
+                background-image: url(img/footerbanner.jpg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+                height: 100%;
+                width: 100%;
+            }
+
+
+         .factsbanner {
+              background: url(img/factsbanner2.jpg) no-repeat center top;
+              margin-top: 0px;
+              padding-top: 60px;
+              text-align: center;
+              background-attachment: relative;
+              background-position: center center;
+              min-height: 480px;
+              width: 100%;
+              height: 690px;
+              -webkit-background-size: 100%;
+              -moz-background-size: 100%;
+              -o-background-size: 100%;
+              background-size: 100%;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              /* background-size: cover; */
+            }
+            
+
+             .solutionsbanner {
+              background: url(img/solutionsbanner.jpg) no-repeat center top;
+              margin-top: 0px;
+              padding-top: 60px;
+              text-align: center;
+              background-attachment: relative;
+              background-position: center center;
+              min-height: 480px;
+              width: 100%;
+              height: 820px;
+              -webkit-background-size: 100%;
+              -moz-background-size: 100%;
+              -o-background-size: 100%;
+              background-size: 100%;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              /* background-size: cover; */
+              }
+              
+
+
+      #navlist li
+            {
+                display: inline;
+                list-style-type: none;
+                padding-right: 5px;
+            }   
+
+
+             .solutiontext{
+
+
+                font-family: 'Abel', sans-serif;
+                font-size: 20px;
+                /*font-style: italic;*/
+            }  
+
+
+            .portfolio-caption{
+                text-align: center;
+            }
+
+
+            .container-fluid
+            {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+
+            .view-first img { 
+                transition: all 0.2s linear;
+            }
+            .view-first .mask {
+                opacity: 0;
+                background-color: rgba(219,127,8, 0.7); 
+                transition: all 0.4s ease-in-out;
+            }
+            .view-first h2 {
+                transform: translateY(-100px);
+                opacity: 0;
+                transition: all 0.2s ease-in-out;
+            }
+            .view-first p { 
+                transform: translateY(100px);
+                opacity: 0;
+                transition: all 0.2s linear;
+            }
+            .view-first a.info{
+                opacity: 0;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .view-first:hover img { 
+                transform: scale(1.1);
+            } 
+            .view-first:hover .mask { 
+                opacity: 1;
+            }
+            .view-first:hover h2,
+            .view-first:hover p,
+            .view-first:hover a.info {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            .view-first:hover p {
+                transition-delay: 0.1s;
+            }
+            .view-first:hover a.info {
+                transition-delay: 0.2s;
+            }
+
+            a {
+                color:  #efc500;
+                font-size: 15px;
+                
+            }
+
+            .view-first .mask2 {
+                opacity: 0;
+                /*background-color: rgba(219,127,8, 0.7); */
+                background-color: #d9edf7;
+                transition: all 0.4s ease-in-out;
+            }
+
+            .view-first .mask3 {
+                opacity: 0;
+                background-color: #f2eebf;
+                transition: all 0.4s ease-in-out;
+            }
+
+            .view-first .mask4 {
+                opacity: 0;
+                background-color: #cce699;
+                transition: all 0.4s ease-in-out;
+            }
+
+            .view-first .mask5 {
+                opacity: 0;
+                background-color: #bad0f7;
+                transition: all 0.4s ease-in-out;
+            }
+
+
+            .view-first .mask6 {
+                opacity: 0;
+                background-color: #efd8c2;
+                transition: all 0.4s ease-in-out;
+            }
+
+            .view-first .mask7 {
+                opacity: 0;
+                background-color: #bde4f4;
+                transition: all 0.4s ease-in-out;
+            }
+
+            .view-first:hover .mask2 { 
+                opacity: 1;
+            }
+
+            .view-first:hover .mask3 { 
+                opacity: 1  ;
+            }
+
+            .view-first:hover .mask4 { 
+                opacity: 1;
+            }
+
+            .view-first:hover .mask5 { 
+                opacity: 1;
+            }
+
+            .view-first:hover .mask6 { 
+                opacity: 1;
+            }
+
+            .view-first:hover .mask7 { 
+                opacity: 1;
+            }
+
+
+            .navbar-brand{
+
+                width:600px;
+                padding-top: 5px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+            }
+
+</style>
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <span class="glyphicon glyphicon-grain" style="float:left;font-size:55px;color:rgb(118,118,118);"></span>
+                    <p style="font-family: 'Merriweather Sans', sans-serif; font-size:32px; margin-left:65px; color:rgb(228,197,0);" >Our Rising Oceans</p>
+                        <!-- color:rgb(204,41,0) red -->
+                </a>
+            </div>
+
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#facts">Facts</a>
+                    </li>
+
+                     <li>
+                        <a class="page-scroll" href="#analysis">Analysis</a>
+                    </li>
+                   
+                    <li>
+                        <a class="page-scroll" href="#solution">Solution</a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="contactus.html">Support</a>
+                    </li>
+
+                  
+                    
+  
+                </ul>
+            </div>
+            
+        </div>
+        
+    </nav>
+
+    <!-- Header -->
+ <div class="container-fluid">
+                    <!-- <div class="container">
+                        <a class="navbar-brand page-scroll" href="#page-top"></a> 
+                    </div>    -->             
+                   <div class="carousel slide" data-ride="carousel" id="carousel-ex">
+                        <ol class="carousel-indicators">
+                              <li data-target="#carousel-ex" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-ex" data-slide-to="1"></li>
+                            <li data-target="#carousel-ex" data-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                                    <div class="item active">
+ 
+                                        <video src="video/7.mp4" autoplay loop muted="muted" style="width:100%;height:100%"></video>
+                                     
+                                    </div>
+
+                                    <div class="item">
+                                       
+                                        <video src="video/5.mp4" autoplay loop muted="muted" style="width:100%;height:100%"></video>   
+                                         
+                                    </div>
+
+                                    <div class="item">
+
+                                        <video  src="video/6.mp4" autoplay loop muted="muted" style="width:100%;height:100%"></video>  
+
+                                    </div>
+
+
+                                    <a href="#carousel-ex" class="left carousel-control" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+
+                                    <a href="#carousel-ex" class="right carousel-control" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                        </div>
+                    </div>
+                
+    </div>    
+
+    <!-- Services Section -->
+    
+    <section id="facts" class="factsbanner">
+        <div class="container">
+
+            <div class="row" style="margin-top:40px;">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Facts</h2> <br>
+                    <p class="solutiontext">Antartica is melting. And if this happens, humanity is in big trouble.</p>
+                </div>
+            </div>
+
+            <div class="row text-center" style="margin-top:50px;margin-bottom:10px;">
+
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                         <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-arrow-circle-down fa-stack-1x fa-inverse"></i> </a>
+                        </span>
+                        <h3 class="service-heading">Evidence</h3><br>
+                        <div style="background-color:rgba(255,255,255,0.5);">
+                            <br><p class="text-muted">Climate Change, Deforestation, Sea Level Changes, Carbon Monoxide and Carbon Dioxide Emmision, California Water Drought</p> <br>
+                        </div> 
+
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                         <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-arrow-circle-o-right fa-stack-1x fa-inverse"></i></a>
+                        </span>
+                        <h3 class="service-heading">Causes</h3><br>
+                        <div style="background-color:rgba(255,255,255,0.5);">
+                            <br><p class="text-muted">Greenhouse gases have risen sharply since 1958, primarily due to the Industrial Revolution.Since the dawn of the Industrial Revolution.
+                            </p><br>
+                         </div>
+                            
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                             <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-check fa-stack-1x fa-inverse"></i> </a>
+                        </span>
+                        <h3 class="service-heading">Effects</h3><br>
+                        <div style="background-color:rgba(255,255,255,0.5);">
+                                <br><p class="text-muted">Global Warming Awareness is a movement that aims to stop global warming: its participants are aware of the social, political and economic consequences.</p><br>
+                        </div>        
+                    </div>
+
+        
+            </div>
+        </div>
+
+     </section>   
+
+<!-- Evidenace Model -->
+ <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                  
+                        <div class="modal-body">
+
+                            <!-- Project Details Go Here -->
+
+ <section id="analysis" class="bg-light-gray">
+        <div class="container" style="margin-top:0px;">
+            
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Evidence</h2> 
+                </div>
+            </div>
+
+        <div class="row" style="margin-top:20px;">
+
+
+                 <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:10px;margin-left:10px;">
+                    <img src="img/co2-1.png" class="img-responsive" />
+                    <div class="mask">
+                        <h3>Earth's Absorption of CO2 May Tilt In Wrong Direction </h3>
+                        <p>For at least the past 50 years, about half of all Earth’s carbon dioxide emissions - human and natural - have been absorbed by the land and oceans.</p>
+                        <a href="http://www.livescience.com/52777-earth-s-absorption-of-co2-may-tilt-in-wrong-direction-video.html" target="_blank" class="info">Read More</a>
+                    </div>
+                </div>
+
+
+               <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:10px;margin-left:10px;">
+                    <img src="img/tempchange.png" class="img-responsive" alt="">
+                    <div class="mask">
+                        <h3>U.S. Agencies Agree: October Was Crazy Warm</h3>
+                        <p>NOAA and NASA said October had the biggest temperature departure of any month in 100-plus years.</p>
+                        <a href="http://www.livescience.com/52850-us-agencies-agree-october-was-crazy-warm.html" class="info">Read More</a>
+                    </div>
+                </div>
+
+                <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:10px;margin-left:10px;">
+                    <img src="img/co2.png" class="img-responsive" alt="">
+                    <div class="mask">
+                        <h3>3 Months of Carbon Dioxide Measured From Space</h3>
+                        <p>NASA Orbiting Carbon Observatory 2, launched in July 2014, measures global atmospheric carbon dioxide. Data from May to August 2015 were compiled to create this visualization.</p>
+                        <a href="http://www.livescience.com/52774-3-months-of-carbon-dioxide-measured-from-space-time-lapse-video.html" target="_blank" class="info">Ream More</a>
+                    </div>
+                </div>
+        
+
+                 <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:10px;margin-left:10px;">
+                    <img src="img/sealevel.png" class="img-responsive" alt="">
+                    <div class="mask">
+                        <h3>End-of-Summer Arctic Sea Ice Could Vanish by 2100</h3>
+                        <p>If human-caused climate change continues unabated our world could change dramatically.</p>
+                        <a href="http://www.livescience.com/52217-emd-of-summer-arctic-sea-ice-could-vanish-by-2100-visualization.html" target="_blank"  class="info">Read More </a>
+                    </div>
+                </div>
+
+                <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:10px;margin-left:10px;">
+                    <img src="img/droughtmodal.png" class="img-responsive" alt="">
+                    <div class="mask">
+                        <h3>California's Worst Drought Ever Is 1st Taste of Future</h3>
+                        <p>The drought now plaguing California is the worst to parch the central and southern parts of the state in the last 1,200 years...</p>
+                        <a href="http://www.livescience.com/49029-california-drought-worst-ever.html" target="_blank"  class="info">Read More</a>
+                    </div>
+                    </div>
+
+                     <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:10px;margin-left:10px;">
+                    <img src="img/droughtmonitor.png" class="img-responsive" alt="">
+                    <div class="mask">
+                        <h3>What Record-Breaking Drought Means for California's Future</h3>
+                        <p>"Climate change is going to lead to overall much drier conditions toward the end of the 21st century than anything we've seen..</p>
+                        <a href="http://www.livescience.com/50417-california-drought-future.html" target="_blank"  class="info">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+ <!-- Causes Model -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Causes</h2>
+                            
+                    
+                            <p>This is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
+                        
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- Effect Model -->
+
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!--  Details Go Here -->
+                            <h2>Effect</h2>
+                            
+                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                            <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
+                            
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+        
+        <div class="container-fluid">    
+
+
+            <div class="row" style="margin-top:0px;">
+
+
+                 <div class="col-sm-1"></div> 
+                 <div class="col-sm-2 text-center view2 view-first" style="border: 1px solid #cccccc; padding-left:30px;padding-right:30px;padding-bottom:10px;background-color:rgb(229,229,229);">
+                    <h5 style="float:left">Carbon Dioxide</h5><br><br>
+                    <span class="glyphicon glyphicon-arrow-up" style="float:left;font-size:30px; color:red;"></span>   
+                    <h1>401.58</h1> <sup style="float:right">Parts per million</sup>
+
+                    <div class="mask2">  
+                     
+                         <p style="color:black; margin-top:15px; padding-left:30px; padding-right:25px;font-family: 'Source Sans Pro', sans-serif;"><i>Carbon dioxide levels in air are at the highest in 650,000 years</i>
+                         <a href="coemission.html">
+                            <button type="button" class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </button>
+                         </a>
+                         </p>
+                        
+                     </div>  
+                
+                   
+                </div>
+
+                <div class="col-sm-2 text-center view2 view-first" style="border: 1px solid #cccccc; padding-left:30px;padding-right:30px;padding-bottom:10px;background-color:rgb(229,229,229);">
+                    <h5 style="float:left">Global Temperature</h5><br><br>
+                    <span class="glyphicon glyphicon-arrow-up" style="float:left;font-size:30px; color:red;"></span>   
+                    <h1>1.4</h1> <sup style="float:right">°F Since 1880</sup>
+
+                     <div class="mask3">  
+                     
+                        <p style="color:black; margin-top:15px; padding-left:20px; padding-right:20px;font-family: 'Source Sans Pro', sans-serif;"><i>Nine out of 10 warmest years on record have been ocurred since 2000</i>
+                         <a href="temperature.html">
+                            <button style="margin-left:10px;" type="button" class="btn btn-warning btn-sm">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </button>
+                         </a>
+                      </p>
+                        
+                     </div>  
+
+                   
+                </div>
+
+               <div class="col-sm-2 text-center view2 view-first" style="border: 1px solid #cccccc; padding-left:30px;padding-right:30px;padding-bottom:10px;background-color:rgb(229,229,229);">
+                    <h5 style="float:left">Artic Ice Minimum</h5><br><br>
+                    <span class="glyphicon glyphicon-arrow-down" style="float:left;font-size:30px; color:red;"></span>   
+                    <h1>13.3</h1> <sup style="float:right">percent per decade</sup>
+
+                    <div class="mask4">  
+                     
+                         <p style="color:black; margin-top:15px; padding-left:20px; padding-right:20px;font-family: 'Source Sans Pro', sans-serif;"><i>In 2012, Artic summer sea ice shrank to the lowest extent on record</i>
+                         <a href="oceansRising.html">
+                            <button style="margin-left:10px;" type="button" class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </button>
+                         </a>
+                      </p>
+                        
+                     </div>  
+
+                   
+                </div>
+
+                <div class="col-sm-2 text-center view2 view-first" style="border: 1px solid #cccccc; padding-left:30px;padding-right:30px;padding-bottom:10px;background-color:rgb(229,229,229);">
+                    <h5 style="float:left">Land Ice</h5><br><br>
+                    <span class="glyphicon glyphicon-arrow-down" style="float:left;font-size:30px;color:red;"></span>   
+                    <h1>287.0</h1> <sup style="float:right">billion metric tons per year</sup>
+
+                     <div class="mask5">  
+                     
+                         <p style="color:black; margin-top:23px;padding-left:20px; padding-right:20px;font-family: 'Source Sans Pro', sans-serif;"><i>Greenland Ice loss doubled between 1996 and 2005</i>
+                         <a href="oceansRising.html">
+                            <button style="margin-left:10px;" type="button" class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </button>
+                         </a>
+                      </p>
+                        
+                     </div>  
+
+                   
+                </div>
+
+               <div class="col-sm-2 text-center view2 view-first" style="border: 1px solid #cccccc; padding-left:30px;padding-right:30px;padding-bottom:10px;background-color:rgb(229,229,229);">
+                    <h5 style="float:left">Sea Level</h5><br><br>
+                    <span class="glyphicon glyphicon-arrow-up" style="float:left;font-size:30px; color:red;"></span>   
+                    <h1>3.24</h1> <sup style="float:right">mm per year</sup>
+
+                    <div class="mask6">  
+                     
+                         <p style="color:black; margin-top:15px;padding-left:20px; padding-right:20px;font-family: 'Source Sans Pro', sans-serif;"><i>Global average sea has risen nearly 7' (178 mm) over the past 100 years.</i>
+                         <a href="oceansRising.html">
+                            <button style="margin-left:10px;" type="button" class="btn btn-warning btn-sm">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </button>
+                         </a>
+                      </p>
+                        
+                        
+                     </div>  
+                   
+                </div>
+
+              <!--   <div class="col-sm-2 text-center view2 view-first" style="border: 1px solid #cccccc; padding-left:30px;padding-right:30px;padding-bottom:10px;background-color:rgb(229,229,229);">
+                    <h5 style="float:left">Carbon Monixide</h5><br><br>
+                    <span class="glyphicon glyphicon-arrow-up" style="float:left;font-size:30px; color:red;"></span>   
+                    <h1>401.58</h1> <sup style="float:right">Parts per million</sup>
+                   
+                    <div class="mask7">  
+                     
+                        <p style="color:black; margin-top:15px; padding-left:20px; padding-right:20px;font-family: 'Source Sans Pro', sans-serif;"><i>Carbon monoxide emissions have increased upto 50,000 metric tons in the past 57 years.</i>
+                         <a href="coemission.html">
+                            <button type="button" class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </button>
+                         </a>
+                        </p>
+                        
+                     </div>  
+                </div>   -->    
+                <div class="col-sm-1"></div>  
+
+            </div>
+
+
+        </div>
+    
+
+
+    <!-- Portfolio Grid Section -->
+    <section id="analysis" class="bg-light-gray">
+        <div class="container" style="margin-top:0px;">
+            
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Analysis</h2> 
+                   <!--  <h3 class="solutiontext">This is about our industries, our goverments around the world, taking devisive large scale actions. Evidences section. All the charts for the causes will come here</h3> -->
+                </div>
+            </div>
+
+        <div class="row" style="margin-top:40px;">
+
+
+                 <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:18px;margin-left:18px;">
+                    <img src="img/portfolio/coemission.jpg" class="img-responsive" />
+                    <div class="mask">
+                        <h2>CO Emission</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                        <a href="COemission.html" class="info">Read More</a>
+                    </div>
+                </div>
+
+
+               <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:18px;margin-left:18px;">
+                    <img src="img/portfolio/deforestration.jpg" class="img-responsive" alt="">
+                    <div class="mask">
+                        <h2>Deforestration</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                        <a href="deforestration.html" class="info">Read More</a>
+                    </div>
+                </div>
+
+                <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:18px;margin-left:18px;">
+                    <img src="img/portfolio/oceansrising.jpg" class="img-responsive" alt="">
+                    <div class="mask">
+                        <h2>Oceans Rising</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                        <a href="oceansRising.html" class="info">Oceans Rising</a>
+                    </div>
+                </div>
+        
+
+        </div>
+
+        <div class="row" style="margin-top:80px;">
+
+                <div class="col-md-2 col-sm-3 portfolio-item">
+
+                </div> 
+
+                 <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:18px;margin-left:18px;">
+                    <img src="img/portfolio/climatechange.jpg" class="img-responsive" alt="">
+                    <div class="mask">
+                        <h2>Temparature Change</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                        <a href="temperature.html" class="info">Temparature Change</a>
+                    </div>
+                </div>
+
+                <div class= "col-md-4 col-sm-6 view view-eighth" style="margin-right:18px;margin-left:18px;">
+                    <img src="img/portfolio/drought.jpg" class="img-responsive" alt="">
+                    <div class="mask">
+                        <h2>California Drought</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                        <a href="drought.html" class="info">Drought</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="solution" class="solutionsbanner">
+       <div class="container"> 
+             <!-- <div class="row" style="margin-bottom:300px;margin-top:50px;">
+
+                     <div class="col-md-2" style="text-align:center;">
+                                <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                    <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h3 class="service-heading">Solution</h3>
+                                <p class="text-muted">Greenhouse gases have risen sharply since 1958, primarily due to the Industrial Revolution.Since the dawn of the Industrial Revolution.
+                                </p>
+                    </div>
+              </div>  -->     
+
+              <div class="row" style="margin-top:40px;">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Solutions</h2> <br>
+                    <p class="solutiontext">Greenhouse gases have risen sharply since 1958, primarily due to the Industrial Revolution.</p><br>
+
+                     <div class= "col-md-4 col-sm-6 view3 view-eighth" style="margin-left:25px;margin-right:10px;">
+                            <img src="img/portfolio/coemission.jpg" class="img-responsive" />
+                            <div class="mask">
+                                <br><br>
+                                <h2>CO Emission</h2>
+                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                <a href="COemission.html" class="info">Read More</a>
+                            </div>
+                     </div>
+
+
+                     <div class= "col-md-4 col-sm-6 view3 view-eighth" style="margin-left:10px; margin-right:10px;">
+                            <img src="img/portfolio/coemission.jpg" class="img-responsive" />
+                            <div class="mask">
+                                <br><br>
+                                <h2>CO Emission</h2>
+                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                <a href="COemission.html" class="info">Read More</a>
+                            </div>
+                    </div>
+
+                    <div class= "col-md-4 col-sm-6 view3 view-eighth" style="margin-left:10px; margin-right:10px;">
+                            <img src="img/portfolio/coemission.jpg" class="img-responsive" />
+                            <div class="mask">
+                                <br><br>
+                                <h2>CO Emission</h2>
+                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                <a href="COemission.html" class="info">Read More</a>
+                            </div>
+                     </div>
+                     
+
+
+         </div>    
+
+    </section>
+
+
+
+    <footer class="banner2">
+
+        <div class="container">
+                <div class="row">
+
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <p style="color:white; font-size:35px;">Stay Connected</p>
+                            <div id="navcontainer" style="margin-bottom:30px;">
+                                       <ul id="navlist">
+                                          <li><a href=""><i style="font-size:35px;" class="fa fa-rss"></i></a></li>
+                                          <li><a href="https://twitter.com/ourrisingoceans"><i style="font-size:35px;" class="fa fa-twitter"></i></a></li>
+                                          <li><a href="https://github.com/neerajkumbhar/OurRisingOceans"><i style="font-size:35px;" class="fa fa-github-alt"></i></a></li>
+                                          <li><a href=""><i style="font-size:35px;" class="fa fa-facebook"></i></a></li>
+                                          <li><a href=""><i style="font-size:35px;" class="fa fa-instagram"></i></a></li>
+                                          <li><a href=""><i style="font-size:35px;" class="fa fa-google-plus"></i></a></li>
+                                       </ul>
+                                      
+                            </div>        
+                            <hr> 
+                        </div>
+                </div>
+
+                <div class="row" style="margin-top:20px;">
+
+                        
+                        <div class="col-sm-12" style="text-align:center;">
+                            
+                            <p style="color:white; font-size:35px;">Subscribe for newsletter</p> 
+                            <div class="col-sm-4 col-sm-offset-4" style="margin-bottom:40x">
+                                    <div class="form-group" style="margin-bottom:40px;">
+                                             <input type="email" placeholder="enter email address" class="form-control" required>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-default btn-warning"> 
+                                        <a href="http://www3.weforum.org/docs/WEF_GAC_WhitePaperEnereySecurityGlobalWarming_2012.pdf" download target="_blank">
+                                            <!-- <span class="glyphicon glyphicon-envelope"></span> --> <p style="color:black;"><b>Subscribe</b></p>
+                                        </a>
+
+
+                                    </button>
+                                <!--    
+                                     <a href="http://www.undatarevolution.org/wp-content/uploads/2014/11/A-World-That-Counts.pdf" download target="_blank">Download White Paper</a> --> 
+
+
+                                    <hr>
+                            </div>
+                               
+                        </div>
+                         
+                </div>
+        </div> 
+
+
+   
+       <div class="container" style="margin-top:30px;">
+              
+              <div id="navcontainer">
+                
+                     <ul id="navlist">
+                 
+                            <div class="row">
+                                  <div class="col-sm-3"><p style="color:white; font-size:25px;">Facts</p></div>
+                                  <div class="col-sm-3"><p style="color:white; font-size:25px;">Analysis</p></div>
+                                  <div class="col-sm-3"><p style="color:white; font-size:25px;">Solutions</p></div>
+                                  <div class="col-sm-3"><p style="color:white; font-size:25px;">Support</p></div>
+                            </div>
+                            <br>
+
+                            <div class="row" style="margin-top:10px;">
+                                  <div class="col-sm-3"><a href="#facts">Evidence</a></div>
+                                  <div class="col-sm-3"><a href="COemission.html">CO Emissions</a></div>
+                                  <div class="col-sm-3"><a href="#solution">Energy Innovations</a></div>
+                                  <div class="col-sm-3"><a href="blogs.html">Blogs</a></div> 
+                            </div>
+
+                             <div class="row" style="margin-top:10px;">
+                                  <div class="col-sm-3"><a href="#facts">Causes</a></div>
+                                  <div class="col-sm-3"><a href="deforestration.html">Deforestration</a></div>
+                                  <div class="col-sm-3"><a href="#solution">Greening Transportation</a></div>
+                                  <div class="col-sm-3"><a href="aboutus.html">About Us</a></div> 
+                            </div>
+
+                             <div class="row" style="margin-top:10px;">
+                                  <div class="col-sm-3"><a href="#facts">Effects</a></div>
+                                  <div class="col-sm-3"><a href="oceansRising.html">Oceans Rising</a></div>
+                                  <div class="col-sm-3"><a href="#solution">Revving up renewables</a></div>
+                                  <div class="col-sm-3"><a href="contactus.html">Contact Us<a/></div> 
+                            </div>
+
+                             <div class="row" style="margin-top:10px;">
+                                  <div class="col-sm-3"><a href="#solution">Solutions</a></div>
+                                  <div class="col-sm-3"><a href="temperature.html">Climate Changes</a></div>
+                                  <div class="col-sm-3"><a href="#solution">Reduce Emissions</a></div>
+                                  <div class="col-sm-3"></div> 
+                            </div>
+
+                         
+
+                             <div class="row" style="margin-top:10px;">
+                                  <div class="col-sm-3"></div>
+                                  <div class="col-sm-3"><a href="drought.html">California Drought</a></div>
+                                  <div class="col-sm-3"></div>
+                                  <div class="col-sm-3"></div> 
+                            </div>
+
+                     
+                            
+                    </ul>    
+            </div>
+        </div> 
+
+
+       
+        <div class="row" style="margin-top:300px;">
+                
+
+                  <div class="col-sm-12" style="text-align:center;">
+                      <p style="font-size:11; color:darkgray;">© Copyright 2015 - Our Rising Oceans, Inc. All Rights Reserved</p>
+                  </div>
+
+            </div>
+
+
+        </div>
+      
+    </footer>
+
+ 
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
