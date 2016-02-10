@@ -6,4 +6,7 @@ A Global Warming awareness web application
 - Implementing charts using Google Charts, Google Maps, High Charts, D3.js for expressiveness.
 - Includes pagination, localization, SEO, HTML5 features, and responsive across tablets, desktops and phones
 - Implemented footwe which is same acorss all the web pages. Has got links for News Letters and navigation.
+- Includes blogs page where pagination has been used. reading blogs are no longer a boring tasks on this website. 
+- Hosted on GoDaddy web hosting. Link: http://ourrisingoceans.com/
+
 
