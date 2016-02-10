@@ -7,6 +7,7 @@ A Global Warming awareness web application
 - Includes pagination, localization, SEO, HTML5 features, and responsive across tablets, desktops and phones
 - Implemented footwe which is same acorss all the web pages. Has got links for News Letters and navigation.
 - Includes blogs page where pagination has been used. reading blogs are no longer a boring tasks on this website. 
+- Includes localization. Present in Japenese and English language
 - Hosted on GoDaddy web hosting. Link: http://ourrisingoceans.com/
 
 
